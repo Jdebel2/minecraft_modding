@@ -1,6 +1,7 @@
 package net.crimsong.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.crimsong.tutorialmod.block.ModBlocks;
 import net.crimsong.tutorialmod.item.ModCreativeModeTabs;
 import net.crimsong.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -32,6 +33,7 @@ public class TutorialMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
 
         // Register the commonSetup method for modloading
